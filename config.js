@@ -29,9 +29,10 @@ module.exports = {
   // Restaurant domain configuration
   restaurants: {
     domains: {
-      'awesome-burgers': 'awesome-burgers.your-domain.com',
-      'pizza-palace': 'pizza-palace.your-domain.com',
-      'sushi-heaven': 'sushi-heaven.your-domain.com'
+      'awesome-burgers': 'awesome-burgers.yourdomain.com',
+      'pizza-palace': 'pizza-palace.yourdomain.com',
+      'peakskitchen': 'peakskitchen.yourdomain.com',
+      'sushi-heaven': 'sushi-heaven.yourdomain.com'
     },
     defaultRestaurant: 'awesome-burgers'
   },
@@ -56,5 +57,12 @@ module.exports = {
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
     url: process.env.DB_URL
+  },
+  
+  // Production host settings (for Google Cloud VM)
+  production: {
+    host: process.env.PRODUCTION_HOST || 'yourdomain.com',
+    protocol: 'https',
+    basePath: ''
   }
 };

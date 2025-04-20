@@ -105,7 +105,7 @@ app.use((err, req, res, next) => {
 });
 
 // Start server
-app.listen(PORT, () => {
+const server = app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server running in ${config.server.nodeEnv} mode on port ${PORT}`);
   console.log(`Visit http://localhost:${PORT} to view the application`);
 });
